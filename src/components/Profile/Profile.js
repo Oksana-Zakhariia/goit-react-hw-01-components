@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import user from 'components/user.json';
 console.log(user);
-export const Profile = (props) => {
-  const {avatar, username, tag,location, stats:{followers, views, likes} } = props;
+export const Profile = (user) => {
+  const {avatar, username, tag,location, stats:{followers, views, likes} } = user;
   return <div className='profile'>
   <div className="description">
     <img
@@ -32,14 +32,13 @@ export const Profile = (props) => {
 </div> 
  }
 
-Profile.propTypes = {
-    avatar: PropTypes.string.isRequired,
+Profile.propTypes = {user: PropTypes.shape({avatar: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  stats: PropTypes.shape({
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,})
+    likes: PropTypes.number.isRequired,})})  
     
 }
