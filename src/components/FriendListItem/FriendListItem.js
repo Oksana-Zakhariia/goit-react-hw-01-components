@@ -1,7 +1,7 @@
 import {PropTypes } from 'prop-types';
 
-export const FriendListItem = ({ id, isOnline, avatar, name }) => {
-    // const {id, isOnline, avatar, name } = props
+export const FriendListItem = ( props) => {
+    const {id, isOnline, avatar, name } = props;
     return <>
         <span className="status">{isOnline}</span>
         <img className="avatar" src={avatar} alt={name} width="48" />
