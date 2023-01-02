@@ -1,7 +1,7 @@
 import {PropTypes } from 'prop-types';
 
 export const FriendListItem = ( props) => {
-    const { isOnline, avatar, name } = props;
+    const { id,isOnline, avatar, name } = props;
     return <>
         <span className="status">{isOnline}</span>
         <img className="avatar" src={avatar} alt={name} width="48" />
@@ -11,7 +11,9 @@ export const FriendListItem = ( props) => {
 
 
 FriendListItem.propTypes = {
+    props:PropTypes.exact ({
+    id: PropTypes.number.isRequired,
     isOnline: PropTypes.bool.isRequired,
     avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-}
+}) }
