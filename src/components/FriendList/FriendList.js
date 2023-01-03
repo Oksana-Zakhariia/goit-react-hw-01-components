@@ -2,6 +2,7 @@ import { PropTypes } from  'prop-types'
 import { FriendListItem } from "components/FriendListItem/FriendListItem";
 import friends from 'components/friends.json'
 import { List, ListItem } from './FriendList.styled';
+console.log(friends);
 
 export const FriendList = ({friends}) => {
     return <List>        
