@@ -5,14 +5,13 @@ console.log( friends);
 
 export const FriendList = ({friends}) => {
     return <ul>        
-        {friends.map(friend => {
-            return <li key={friend.id}>
-                <FriendListItem
-                
-                isOnline={friend.isOnline}
-                avatar={friend.avatar}
-                name={friend.name} />  
-                </li> 
+        {friends.map(({id, isOnline, avatar, name}) => {
+            return (
+                <FriendListItem 
+                key={id}    
+                isOnline={isOnline}
+                avatar={avatar}
+                name={name} /> )                 
                 } )}
   </ul>
 }
