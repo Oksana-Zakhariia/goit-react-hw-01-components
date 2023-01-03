@@ -11,7 +11,6 @@ export const App = () => {
     <div
       style={{
         height: '100vh',
-        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -25,8 +24,8 @@ export const App = () => {
   stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      <Statistics stats={data} />
-      <FriendList friends={friends} />;
+      {/* <Statistics stats={data} /> */}
+      <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </div>
   );

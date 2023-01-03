@@ -1,17 +1,18 @@
 import data from 'components/data.json'
 import {PropTypes } from 'prop-types';
+import { List, StatsItem, StatsSection, Title } from './Statistics.styled';
 console.log(data
 );
 
 export const Statistics = (props) => {
-    return <section className='statistics'>
-       {props.title && <h2 className='title'> {props.title}</h2>} 
-        <ul> {props.stats.map(data => {return  <li key={data.id}>
+    return <StatsSection>
+       {props.title && <Title> {props.title}</Title>} 
+        <List> {props.stats.map(data => {return  <StatsItem key={data.id}>
                 <span className='label'>{data.label} </span>
                 <span className='percentage'>{ data.percentage}%</span>
-            </li>})}
-    </ul>
-    </section>
+            </StatsItem>})}
+        </List>
+    </StatsSection>
 }
 Statistics.propTypes = {
     title: PropTypes.string,
