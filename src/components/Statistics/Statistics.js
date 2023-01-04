@@ -1,6 +1,6 @@
 import data from 'components/data.json'
 import {PropTypes } from 'prop-types';
-import { List, StatsItem, StatsSection, Title } from './Statistics.styled';
+import { List, StatsItem, StatsSection, Title, StatsLabel, Persentage } from './Statistics.styled';
 console.log(data
 );
 
@@ -8,8 +8,8 @@ export const Statistics = (props) => {
     return <StatsSection>
        {props.title && <Title> {props.title}</Title>} 
         <List> {props.stats.map(data => {return  <StatsItem key={data.id}>
-                <span className='label'>{data.label} </span>
-                <span className='percentage'>{ data.percentage}%</span>
+                <StatsLabel>{data.label} </StatsLabel>
+                <Persentage>{ data.percentage}%</Persentage>
             </StatsItem>})}
         </List>
     </StatsSection>

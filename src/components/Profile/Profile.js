@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import user from 'components/user.json';
-import { ProfileConatiner, Stats, UserInfo, UserPhoto, StatsItem } from './Profile.styled';
+import { ProfileConatiner, Stats, UserInfo, UserPhoto, StatsItem, UserName, StatsLabel, StatsQuantity } from './Profile.styled';
 console.log(user);
 export const Profile = (user) => {
   const {avatar, username, tag,location, stats:{followers, views, likes} } = user;
@@ -9,25 +9,24 @@ export const Profile = (user) => {
     <UserPhoto
       src={avatar}
       alt="User avatar"
-      className="avatar"
     />
-    <p className="name">{username}</p>
-      <p className="tag">{tag}</p>
-    <p className="location">{location}</p>
+    <UserName>{username}</UserName>
+    <p >{tag}</p>
+    <p >{location}</p>
   </UserInfo>
 
   <Stats>
     <StatsItem>
-      <span className="label">Followers </span>
-        <span className="quantity">{followers}</span>
+      <StatsLabel>Followers </StatsLabel>
+      <StatsQuantity>{followers}</StatsQuantity>
     </StatsItem>
     <StatsItem>
-      <span className="label">Views </span>
-        <span className="quantity">{views}</span>
+      <StatsLabel>Views </StatsLabel>
+      <StatsQuantity>{views}</StatsQuantity>
     </StatsItem>
     <StatsItem>
-      <span className="label">Likes </span>
-        <span className="quantity">{likes}</span>
+      <StatsLabel>Likes </StatsLabel>
+      <StatsQuantity>{likes}</StatsQuantity>
     </StatsItem>
   </Stats>
 </ProfileConatiner> 
