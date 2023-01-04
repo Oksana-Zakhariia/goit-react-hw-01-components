@@ -4,7 +4,7 @@ import { FriendCard, Status, FriendName } from './FriendListItem.styled';
 export const FriendListItem = ( props) => {
     const { isOnline, avatar, name } = props;
     return <FriendCard>
-        <Status isActive ={isOnline}></Status>
+        <Status isOnline ={isOnline}></Status>
         <img  src={avatar} alt={name} width="48" />
         <FriendName>{name}</FriendName>
 </FriendCard>

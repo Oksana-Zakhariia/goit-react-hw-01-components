@@ -10,7 +10,7 @@ export const Status = styled.span`
 width:30px; 
 height:30px;
 border-radius: 50%;
-background-color: ${props => { return props.isActive ? 'green' : 'red' }}
+background-color: ${props => { return props.isOnline ? 'green' : 'red' }}
 `;
 export const FriendName = styled.p`
 font-weight: 700`
