@@ -1,6 +1,7 @@
-import data from 'components/data.json'
+// import data from 'components/data.json'
 import {PropTypes } from 'prop-types';
 import { List, StatsItem, StatsSection, Title, StatsLabel, Persentage } from './Statistics.styled';
+// console.log(data);
 
 export const Statistics = (props) => {
     return <StatsSection>
