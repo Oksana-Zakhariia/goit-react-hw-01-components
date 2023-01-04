@@ -5,6 +5,7 @@ display: flex;
 gap:30px;
 align-items: center;
 padding:10px;
+
 `;
 export const Status = styled.span`
 width:30px; 

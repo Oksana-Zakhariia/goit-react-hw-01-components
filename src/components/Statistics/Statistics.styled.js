@@ -25,7 +25,6 @@ color: white;
 background-color: ${props => { return getRandomHexColor() }};
 `; 
 export const StatsLabel = styled.span`
-
 font-size: 18px;`;
 export const Persentage = styled.span`
 font-weight: 700`;
