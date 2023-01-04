@@ -19,5 +19,4 @@ border-radius:10px;
     background-color: violet;
     scale: 1.1;
     transition-duration: 250ms;   
-}
-`
+}`;

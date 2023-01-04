@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import { Table, TableHead,TableRow, TableHeaders,TableData } from './TransactionHistory.styled';
 export const TransactionHistory = ({ items }) => {
-
     return (<Table>
         <TableHead>
             <TableRow>
