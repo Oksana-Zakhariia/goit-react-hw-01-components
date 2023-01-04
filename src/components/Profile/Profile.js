@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import user from 'components/user.json';
+import user from '../../data/user.json';
 import { ProfileConatiner, Stats, UserInfo, UserPhoto, StatsItem, UserName, StatsLabel, StatsQuantity } from './Profile.styled';
 console.log(user);
 export const Profile = (user) => {

@@ -3,12 +3,12 @@ import {PropTypes } from 'prop-types';
 import { List, StatsItem, StatsSection, Title, StatsLabel, Persentage } from './Statistics.styled';
 // console.log(data);
 
-export const Statistics = (props) => {
+export const Statistics = ({title, stats }) => {
     return <StatsSection>
-       {props.title && <Title> {props.title}</Title>} 
-        <List> {props.stats.map(data => {return  <StatsItem key={data.id}>
-                <StatsLabel>{data.label} </StatsLabel>
-                <Persentage>{ data.percentage}%</Persentage>
+       {title && <Title> {title}</Title>} 
+        <List> {stats.map(({ id, label, percentage }) => {return  <StatsItem key={id}>
+                <StatsLabel>{label} </StatsLabel>
+                <Persentage>{percentage}%</Persentage>
             </StatsItem>})}
         </List>
     </StatsSection>
